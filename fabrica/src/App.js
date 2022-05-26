@@ -1,19 +1,32 @@
 import './App.css';
-import Title from './Components/title.js';
-import Subtitle from './Components/subtitle.js';
-import tableButton from './Components/tablesbutton.js';
+import Title from './Components/Title/title.js';
+import Subtitle from './Components/Subtitle/subtitle.js';
+import Tablebutton from './Components/Buttons/tablebutton.js';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 function App() {
     return (
+      <>
       <div>
       <header>
       <Title/>
       <Subtitle/>
       </header>
-      <tableButton title="Clientes"/>
-      <tableButton title="Guitarras"/>
-      <tableButton title="Materiales"/>
+      <br/>
+      <div className="tablebuttons">
+      <Tablebutton nombre="Proveedores" clase="btn btn-outline-primary btn-lg"/>
+      <Tablebutton nombre="Materiales_proveedores" clase="btn btn-outline-primary btn-lg"/>
+      <Tablebutton nombre="Materiales" clase="btn btn-outline-success btn-lg"/>
+      <Tablebutton nombre="Materiales_guitarras" clase="btn btn-outline-success btn-lg"/>
+      <Tablebutton nombre="Guitarras" clase="btn btn-outline-danger btn-lg"/>
+      <Tablebutton nombre="Pedidos_detalle" clase="btn btn-outline-dark btn-lg"/>      
+      <Tablebutton nombre="Pedidos" clase="btn btn-outline-dark btn-lg"/>
+      <Tablebutton nombre="Clientes" clase="btn btn-outline-secondary btn-lg"/>
+      <Tablebutton nombre="Direcciones_envio" clase="btn btn-outline-secondary btn-lg"/>
       </div>
+      </div>
+      </>
     );
 }
 
